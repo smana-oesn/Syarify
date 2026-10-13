@@ -42,50 +42,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const isActive = (item: NavItem) => item.match.includes(route.name);
 
  return (
-   <div 
-      className="min-h-screen flex relative"
-      style={{
-        backgroundColor: '#f7f4ed',
-        overflowX: 'hidden',
-        width: '100%'
-      }}
-    >
-      {/* Hiasan Gapura Bali Sisi Kiri */}
-      <div 
-        style={{
-          position: 'fixed',
-          bottom: 0,
-          left: 0,
-          width: '160px',
-          height: '280px',
-          backgroundImage: "url('https://id.pinterest.com/djavagebyok/gapura-bali/')",
-          backgroundSize: 'contain',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'bottom left',
-          opacity: 0.25,
-          pointerEvents: 'none',
-          zIndex: 1
-        }}
-      />
-
-      {/* Hiasan Gapura Bali Sisi Kanan */}
-      <div 
-        style={{
-          position: 'fixed',
-          bottom: 0,
-          right: 0,
-          width: '160px',
-          height: '280px',
-          backgroundImage: "url('https://id.pinterest.com/djavagebyok/gapura-bali/')",
-          backgroundSize: 'contain',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'bottom right',
-          opacity: 0.25,
-          pointerEvents: 'none',
-          zIndex: 1
-        }}
-      />
-
     <div className="min-h-screen bg-cream text-ink">
       {/* Desktop sidebar */}
       <aside className="hidden md:flex fixed left-0 top-0 bottom-0 w-64 bg-white border-r border-primary-100 flex-col z-30">
