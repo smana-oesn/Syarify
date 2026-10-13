@@ -186,3 +186,50 @@ html {
     touch-action: manipulation;
   }
 }
+
+/* Mengatur wadah utama agar ornamen pojok terkunci rapi */
+div.min-h-screen.bg-cream {
+  position: relative;
+  overflow-x: hidden;
+  background-color: #f7f4ed !important; /* Warna dasar cream abu/syariah */
+}
+
+/* Menyisipkan Candi Bentar sisi Kiri di pojok kiri bawah layar */
+div.min-h-screen.bg-cream::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 180px; /* Atur lebar gapura sesuai selera Anda */
+  height: 320px; /* Atur tinggi gapura */
+  background-image: url('https://www.magnific.com/idn/psd/gapura-bali');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  opacity: 0.15; /* Dibuat 15% transparan agar teks materi di depannya tetap sangat jelas terbaca */
+  pointer-events: none; /* Agar tidak menghalangi klik mouse pada tombol web */
+  z-index: 0;
+}
+
+/* Menyisipkan Candi Bentar sisi Kanan di pojok kanan bawah layar */
+div.min-h-screen.bg-cream::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 180px;
+  height: 320px;
+  background-image: url('https://www.magnific.com/idn/psd/gapura-bali');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Memastikan materi utama berada di lapisan atas ornamen */
+main.max-w-3xl {
+  position: relative;
+  z-index: 10;
+}
