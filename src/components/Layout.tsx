@@ -41,6 +41,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   const isActive = (item: NavItem) => item.match.includes(route.name);
 
+ return (
    <div 
       className="min-h-screen flex relative"
       style={{
