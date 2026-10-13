@@ -187,49 +187,49 @@ html {
   }
 }
 
-/* Mengatur wadah utama agar ornamen pojok terkunci rapi */
-div.min-h-screen.bg-cream {
-  position: relative;
-  overflow-x: hidden;
-  background-color: #f7f4ed !important; /* Warna dasar cream abu/syariah */
+/* Menyelaraskan dengan kelas asli website: min-h-screen bg-cream */
+.min-h-screen.bg-cream {
+  position: relative !important;
+  overflow-x: hidden !important;
+  background-color: #f7f4ed !important; /* Memaksa warna cream syariah aktif */
 }
 
-/* Menyisipkan Candi Bentar sisi Kiri di pojok kiri bawah layar */
-div.min-h-screen.bg-cream::before {
+/* Menyisipkan Gapura Candi Bentar sisi Kiri di pojok kiri bawah layar */
+.min-h-screen.bg-cream::before {
   content: "";
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
-  width: 180px; /* Atur lebar gapura sesuai selera Anda */
-  height: 320px; /* Atur tinggi gapura */
-  background-image: url('https://www.magnific.com/idn/psd/gapura-bali');
+  width: 160px; /* Lebar gapura */
+  height: 280px; /* Tinggi gapura */
+  background-image: url('https://www.magnific.com/idn/psd/gapura-bali') !important;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom left;
-  opacity: 0.15; /* Dibuat 15% transparan agar teks materi di depannya tetap sangat jelas terbaca */
-  pointer-events: none; /* Agar tidak menghalangi klik mouse pada tombol web */
-  z-index: 0;
+  opacity: 0.25; /* Transparansi gapura (25%) agar teks di depannya tetap terbaca jelas */
+  pointer-events: none; /* Agar tidak menghalangi klik pada tombol utama */
+  z-index: 1;
 }
 
-/* Menyisipkan Candi Bentar sisi Kanan di pojok kanan bawah layar */
-div.min-h-screen.bg-cream::after {
+/* Menyisipkan Gapura Candi Bentar sisi Kanan di pojok kanan bawah layar */
+.min-h-screen.bg-cream::after {
   content: "";
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
-  width: 180px;
-  height: 320px;
-  background-image: url('https://www.magnific.com/idn/psd/gapura-bali');
+  width: 160px;
+  height: 280px;
+  background-image: url('https://www.magnific.com/idn/psd/gapura-bali') !important;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom right;
-  opacity: 0.15;
+  opacity: 0.25;
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
 }
 
-/* Memastikan materi utama berada di lapisan atas ornamen */
-main.max-w-3xl {
+/* Memastikan teks dan konten utama berada di lapisan atas (depan) ornamen */
+#root, main {
   position: relative;
   z-index: 10;
 }
