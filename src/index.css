@@ -190,3 +190,42 @@ html {
   position: relative;
   z-index: 10;
 }
+
+/* Menarik hiasan Gapura Bali secara aman dari luar file struktur */
+.min-h-screen.bg-cream {
+  position: relative !important;
+  overflow-x: hidden !important;
+  background-color: #f7f4ed !important;
+}
+
+.min-h-screen.bg-cream::before {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 160px;
+  height: 280px;
+  background-image: url('https://r2.dev') !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.min-h-screen.bg-cream::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 160px;
+  height: 280px;
+  background-image: url('https://r2.dev') !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 100;
+}
