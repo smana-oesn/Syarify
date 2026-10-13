@@ -186,35 +186,3 @@ html {
     touch-action: manipulation;
   }
 }
-
-/* Menambahkan pola ornamen ukiran halus di area latar belakang utama */
-div.min-h-screen.bg-cream {
-  position: relative;
-  overflow: hidden;
-  background-color: #f7f4ed !important;
-}
-
-div.min-h-screen.bg-cream::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url('https://transparenttextures.com');
-  background-repeat: repeat;
-  opacity: 0.05; /* Dibuat tipis transparan (5%) agar teks materi tetap sangat jelas dibaca */
-  pointer-events: none;
-}
-
-/* Menambahkan aksen list garis emas mewah tepat di bawah header atas */
-header.border-b {
-  position: relative;
-}
-
-header.border-b::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, #c5a880, #e5c890, #c5a880);
-}
